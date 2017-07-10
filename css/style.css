@@ -19,3 +19,165 @@ header .logo{
 	background: linear-gradient(#04519b, #044687 60%, #033769);
 	color: #fff !important;
 }
+
+/**
+	말풍선 화살표 그리기
+	
+**/
+.bubble::after {
+	content: '';
+	position: absolute;	
+	border-style: solid;
+	border-width: 15px 15px 15px 0;
+	border-color: transparent #fff;
+	display: block;
+	width: 0;
+	z-index: 1;
+	margin-top: -15px;
+	left: -15px;
+	top: 50%;
+}
+
+.bubble::before {
+	content: '';
+	position: absolute;
+	border-style: solid;
+	border-width: 15px 15px 15px 0;
+	display: block;
+	width: 0;
+	z-index: 1;
+	margin-top: -15px;
+	left: -16px;
+	top: 50%;
+	border-color: transparent #ccc;
+}
+
+
+.post-actions {
+	margin: 5px;
+}
+
+
+
+.comment-form .form-group {
+	width: 90%;
+}
+.comment-form input[type='text']{
+	width: 100%;
+
+}
+
+.comment-avatar img {
+	width: 40px;
+	margin-right: 5px;
+}
+
+.comment {
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 3px;
+	margin: 5px 0;
+	overflow: auto;
+	width: 100%;
+}
+
+.friends li { /* 각 절의 알림표를 지우고, inline으로 만든다 */
+	list-style: none;
+	padding: 0 5px;
+	float: left;
+}
+
+.friends img {
+	width: 55px;
+}
+
+.bubble {
+	position: relative;
+	width: 580px;
+	min-height: 65px;
+	padding: 15px;
+	background: #fff;
+	border-radius: 10px;
+	border: 1px solid #ccc;
+}
+
+.groups img {
+	width: 80px;
+	float: left;
+	margin-right: 50px;
+}
+
+.group-item {
+	 padding-bottom: 10px;
+	 margin-bottom: 20px;
+	 border-bottom: 1px solid #ccc;
+	 overflow: auto;
+}
+
+.members img{
+	margin-bottom: 5px;
+}
+
+.profile ul {
+	margin-top: 30px;
+
+}
+
+.profile li {
+	
+	line-height: 1.9em;
+	list-style: none;
+
+}
+
+.photos {
+	margin: 0;
+	padding: 0;
+}
+/*
+	ul - li 로 사진 정렬하는 방법
+	li {
+		list-style: none;
+		float: left; (float: left를 하면 자동적으로 position: relative 성립)
+		margin: 5px;
+		width: 23%;	(width:23 % = 한 줄에 4개씩 이미지를 넣겠다 라는 의미)
+	}
+	img {
+		widht: 100%;	(width 를 100%로 설정하지 않으면 이미지 자체크기가 너무 작거나 큰 이미지가 li: width: 23% 에 맞춰 들어가지 않고 이미지 자체의 이미지가 적용된다)
+	}
+*/
+.photos li{
+	list-style: none;
+	display: inline-block;
+	margin: 5px;
+	width: 23%;
+}
+
+.photos img{
+	width: 100%;
+}
+
+
+footer {
+	background: #f4f4f4;
+	height: 40px;
+	color: #04519b;
+	font-weight: bold;
+	text-align: center;
+	padding-top: 40px;
+	margin-top: 30px;
+	border-top: 7px solid #04519b;
+}
+
+.members .member-row {
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
+
+@media(min-width: 991px ) {
+	.members p {
+		padding-top: 40px;
+
+	}
+}

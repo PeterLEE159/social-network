@@ -10,9 +10,12 @@
     <title>Social Network Example</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+    
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/my.js"></script>
   
 
     
@@ -56,10 +59,10 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="home.html">홈</a></li>
-            <li><a href="friends.html">친구</a></li>
+            <li class="active"><a href="index.html">홈</a></li>
+            <li><a href="groups.html">그룹</a></li>
             <li><a href="members.html">멤버</a></li>
-            <li><a href="feeds.html">피드</a></li>
+            <li><a href="photos.html">포토</a></li>
             <li><a href="profile.html">내 정보</a></li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -77,28 +80,230 @@
               <div class="panel-body">
                 <form>
                   <div class="form-group">
-                    
                     <textarea type="text" class="form-control" placeholder="담벼락에 글을 쓰세요"></textarea>
                   </div>
                   <button type="submit" class="btn btn-default">제출</button>
                   <div class="pull-right">
                     <div class="btn-group" role="group" aria-label="...">
-                      <button type="button" class="btn btn-default">Left</button>
-                      <button type="button" class="btn btn-default">Middle</button>
-                      <button type="button" class="btn btn-default">Right</button>
+                      <button type="button" class="btn btn-default"><i class="fa fa-pencil" aria-hidden="true"></i> 문자</button>
+                      <button type="button" class="btn btn-default"><i class="fa fa-image" aria-hidden="true"></i> 이미지</button>
+                      <button type="button" class="btn btn-default"><i class="fa fa-video-camera" aria-hidden="true"></i> 비디오</button>
                     </div>
                   </div>
                 </form>
               </div>
             </div>
-          </div>
+            <div class="panel panel-default post">
+              <div class="panel-body">
+                <div class="row">
+                  <div class=col-sm-2> <!-- xs 는 웹사이트의 가로길이가 사이즈가 768px 이하일 경우, 자동으로 크기가 줄어든다. 
+                  그 이상인 sm, md, lg 는 각각 기준 이하로 가로길이가 짦아질 경우, 12칸 전체를 차지한다!-->
+                    <a class="post-avatar thumbnail" href="profile.html">
+                      <img src="img/user.png">
+                      <div class="text-center">
+                        유저1
+                      </div>
+                      <div class="likes text-center">
+                        7 Likes
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="col-sm-10">
+                    <div class="bubble">
+                      <div class="pointer">
+                        <p>안녕하세요! 반갑습니다.</p>
+
+                      </div>
+                      <div class="pointer-border">
+
+                      </div>
+                    </div> <!-- bubble 종료 -->
+                    <p class="post-actions">
+                      <a href="#">댓글</a> - 
+                      <a href="#">좋아요</a> - 
+                      <a href="#">팔로우</a> - 
+                      <a href="#">공유</a>
+                    </p>
+                    <div class="comment-form">
+                      <form class="form-inline">
+                        <div class="form-group">
+                          <input type="text" class="form-control" placeholder="댓글을 입력해주세요">
+                        </div>
+                        <button type="submit" class="btn btn-default">댓글</button>
+                      </form>
+                    </div>
+                    <div class="claerfix">
+
+                    </div>
+                    <div class="comments"> <!-- 댓글 모음 -->
+                      <div class="comment"> <!-- 댓글 한개 .. -->
+                        <a class="comment-avatar pull-left" href="#"> <!-- 유저 이미지 -->
+                          <img src="img/user.png">
+                        </a>
+                        <div class="comment-text"> <!-- 댓글 내용 -->
+                          <p>댓글댓글댓글댓글댓글댓글</p>
+                        </div>
+                      </div>
+                      <div class="clearfix"></div>
+                      <div class="comment"> <!-- 댓글 한개 .. -->
+                        <a class="comment-avatar pull-left" href="#"> <!-- 유저 이미지 -->
+                          <img src="img/user.png">
+                        </a>
+                        <div class="comment-text"> <!-- 댓글 내용 -->
+                          <p>댓글댓글댓글댓글댓글댓글</p>
+                        </div>
+                      </div>
+                      <div class="clearfix"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel panel-default post">
+              <div class="panel-body">
+                <div class="row">
+                  <div class=col-sm-2> <!-- xs 는 웹사이트의 가로길이가 사이즈가 768px 이하일 경우, 자동으로 크기가 줄어든다. 
+                  그 이상인 sm, md, lg 는 각각 기준 이하로 가로길이가 짦아질 경우, 12칸 전체를 차지한다!-->
+                    <a class="post-avatar thumbnail" href="profile.html">
+                      <img src="img/user.png">
+                      <div class="text-center">
+                        유저1
+                      </div>
+                      <div class="likes text-center">
+                        7 Likes
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="col-sm-10">
+                    <div class="bubble">
+                      <div class="pointer">
+                        <p>안녕하세요! 반갑습니다.</p>
+
+                      </div>
+                      <div class="pointer-border">
+
+                      </div>
+                    </div> <!-- bubble 종료 -->
+                    <p class="post-actions">
+                      <a href="#">댓글</a> - 
+                      <a href="#">좋아요</a> - 
+                      <a href="#">팔로우</a> - 
+                      <a href="#">공유</a>
+                    </p>
+                    <div class="comment-form">
+                      <form class="form-inline">
+                        <div class="form-group">
+                          <input type="text" class="form-control" placeholder="댓글을 입력해주세요">
+                        </div>
+                        <button type="submit" class="btn btn-default">댓글</button>
+                      </form>
+                    </div>
+                    <div class="claerfix">
+
+                    </div>
+                    <div class="comments"> <!-- 댓글 모음 -->
+                      <div class="comment"> <!-- 댓글 한개 .. -->
+                        <a class="comment-avatar pull-left" href="#"> <!-- 유저 이미지 -->
+                          <img src="img/user.png">
+                        </a>
+                        <div class="comment-text"> <!-- 댓글 내용 -->
+                          <p>댓글댓글댓글댓글댓글댓글</p>
+                        </div>
+                      </div>
+                      <div class="clearfix"></div>
+                      <div class="comment"> <!-- 댓글 한개 .. -->
+                        <a class="comment-avatar pull-left" href="#"> <!-- 유저 이미지 -->
+                          <img src="img/user.png">
+                        </a>
+                        <div class="comment-text"> <!-- 댓글 내용 -->
+                          <p>여기도 댓글</p>
+                        </div>
+                      </div>
+                      <div class="clearfix"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+            </div>
+          </div> <!-- col-md-8 종료 !-->
           <div class="col-md-4">
+            <div class="panel panel-default friends">
+              <div class="panel-heading">
+                <h3 class="panel-title">친구들</h3>
+              </div>
+              <div class="panel-body">
+                <ul>
+                  <li><a class="thumbnail" href="profile.html"><img src="img/user.png"></a></li>
+                  <li><a class="thumbnail" href="profile.html"><img src="img/user.png"></a></li>
+                  <li><a class="thumbnail" href="profile.html"><img src="img/user.png"></a></li>
+                  <li><a class="thumbnail" href="profile.html"><img src="img/user.png"></a></li>
+                  <li><a class="thumbnail" href="profile.html"><img src="img/user.png"></a></li>
+                  <li><a class="thumbnail" href="profile.html"><img src="img/user.png"></a></li>
+                  <li><a class="thumbnail" href="profile.html"><img src="img/user.png"></a></li>
+                  <li><a class="thumbnail" href="profile.html"><img src="img/user.png"></a></li>
+                  <li><a class="thumbnail" href="profile.html"><img src="img/user.png"></a></li>
+                  <li><a class="thumbnail" href="profile.html"><img src="img/user.png"></a></li>
+                  <li><a class="thumbnail" href="profile.html"><img src="img/user.png"></a></li>
+                  <li><a class="thumbnail" href="profile.html"><img src="img/user.png"></a></li>
+                </ul>
+                <div class="clearfix">
+
+                </div>
+                <a class="btn btn-primary center-block" href="#">
+                  친구 전체보기
+                </a>
+
+              </div>
+            </div>
+
+            <div class="panel panel-default groups">
+              <div class="panel-heading">
+                <h3 class="panel-title">
+                  가입한 그룹
+                </h3>
+              </div>
+              <div class="panel-body">
+                <div class="group-item" >
+                  <img src="img/group.png">
+                  <h4><a href="#">예제 그룹 1</a></h4>
+                  <p>여기는 예제 1번 그룹입니다</p>
+                </div>
+                <div class="clearfix"></div>
+
+                <div class="group-item">
+                  <img src="img/group.png">
+                  <h4><a href="#">예제 그룹 2</a></h4>
+                  <p>여기는 예제 2번 그룹입니다</p>
+                </div>
+                <div class="clearfix"></div>
+
+                <div class="group-item">
+                  <img src="img/group.png">
+                  <h4><a href="#">예제 그룹 3</a></h4>
+                  <p>여기는 예제 3번 그룹입니다</p>
+                </div>
+                <div class="clearfix"></div>
+
+                <a class="btn btn-primary center-block" href="#">
+                  그룹 전체보기
+                </a>
+              </div>
+            </div>
 
           </div>
         </div>
-      </div>
+      </div> 
+        
     </section>
-
-
+    <footer> <!-- 아랫글 .. -->
+      <div class="container">
+        <p>Dobble Copyright &copy; 2017, All right reserved</p>
+      </div>
+    </footer>
   </body>
 </html>
