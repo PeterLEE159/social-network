@@ -144,7 +144,7 @@ header .logo{
 	}
 	img {
 		widht: 100%;	(width 를 100%로 설정하지 않으면 이미지 자체크기가 너무 작거나 큰 이미지가 li: width: 23% 에 맞춰 들어가지 않고 이미지 자체의 이미지가 적용된다)
-	}
+	} 
 */
 .photos li{
 	list-style: none;

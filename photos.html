@@ -10,12 +10,10 @@
     <title>Photos</title>
 
     <!-- Bootstrap core CSS -->
+    <link href="css/ekko-lightbox.css" rel="stylesheet">
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/font-awesome.css" rel="stylesheet">
-  
-
-    
   </head>
 
   <body>
@@ -72,15 +70,37 @@
           <div class="col-md-8">
             <h1 class="page-header">Photos</h1>
             <ul class="photos gallery-parent">
-              <li><img src="img/sample1.jpg" class="img-thumbnail"></li>
-              <li><img src="img/sample2.jpg" class="img-thumbnail"></li>
-              <li><img src="img/sample3.jpg" class="img-thumbnail"></li>
-              <li><img src="img/sample4.jpg" class="img-thumbnail"></li>
-              <li><img src="img/sample5.jpg" class="img-thumbnail"></li>
-              <li><img src="img/sample6.jpg" class="img-thumbnail"></li>
-
+              <li>
+                <a href="img/sample1.jpg" data-toggle="lightbox" data-title="Image one" data-footer="This is image one" data-gallery="mygallery" data-parent=".gallery-parent" data-hover="tooltip" data-placement="top" title="This is image1">
+                  <img src="img/sample1.jpg" class="img-thumbnail">
+                </a>
+            </li>
+              <li>
+                <a href="img/sample2.jpg" data-toggle="lightbox" data-title="Image one" data-footer="This is image one" data-gallery="mygallery" data-parent=".gallery-parent" data-hover="tooltip" data-placement="top" title="This is image1">
+                  <img src="img/sample2.jpg" class="img-thumbnail">
+                </a>
+              </li>
+              <li>
+                <a href="img/sample3.jpg" data-toggle="lightbox" data-title="Image one" data-footer="This is image one" data-gallery="mygallery" data-parent=".gallery-parent" data-hover="tooltip" data-placement="top" title="This is image1">
+                  <img src="img/sample3.jpg" class="img-thumbnail">
+                </a>
+              </li>
+              <li>
+                <a href="img/sample4.jpg" data-toggle="lightbox" data-title="Image one" data-footer="This is image one" data-gallery="mygallery" data-parent=".gallery-parent" data-hover="tooltip" data-placement="top" title="This is image1">
+                  <img src="img/sample4.jpg" class="img-thumbnail">
+                </a>
+              </li>
+              <li>
+                <a href="img/sample5.jpg" data-toggle="lightbox" data-title="Image one" data-footer="This is image one" data-gallery="mygallery" data-parent=".gallery-parent" data-hover="tooltip" data-placement="top" title="This is image1">
+                  <img src="img/sample5.jpg" class="img-thumbnail">
+                </a>
+              </li>
+              <li>
+                <a href="img/sample6.jpg" data-toggle="lightbox" data-title="Image one" data-footer="This is image one" data-gallery="mygallery" data-parent=".gallery-parent" data-hover="tooltip" data-placement="top" title="This is image1">
+                  <img src="img/sample6.jpg" class="img-thumbnail">
+                </a>
+              </li>
             </ul>
-
             
           </div> <!-- col-md-8 종료 !-->
           <div class="col-md-4">
@@ -157,5 +177,17 @@
         <p>Dobble Copyright &copy; 2017, All right reserved</p>
       </div>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/ekko-lightbox.js"></script>
+    <script>
+      $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+          event.preventDefault();
+          $(this).ekkoLightbox();
+      });
+      $(function () {
+        $('[data-hover="tooltip"]').tooltip()
+      });
+    </script>
   </body>
 </html>
